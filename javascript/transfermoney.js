@@ -1,8 +1,8 @@
-document.getElementById('addMoney')
+document.getElementById("transfer-money-btn")
     .addEventListener('click', function (event) {
         event.preventDefault();
-        const amount = document.getElementById("amount").value;
-        const convertedAmount = parseFloat(amount);
+        const transferAmount = document.getElementById("transfer-Amount").value;
+        const convertedTransferAmount = parseFloat(transferAmount);
 
         const pin = document.getElementById("pin").value;
         const convertedPin = parseInt(pin);
@@ -11,10 +11,12 @@ document.getElementById('addMoney')
         const convertedMainBalance = parseFloat(mainBalance);
 
         if( convertedPin === 1234){
-            const sum = convertedMainBalance + convertedAmount;
-            document.getElementById("mainBalance").innerText = sum;
+            const sub = convertedMainBalance - convertedTransferAmount;
+            document.getElementById("mainBalance").innerText = sub;
             document.getElementById("amount").value = '';
         }else{
-            alert("Your PIN is wrong!Enter the new PIN")
+            alert("enter valid PIN !")
         }
-    })
+
+
+})
