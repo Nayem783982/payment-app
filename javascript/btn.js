@@ -6,7 +6,7 @@ document.getElementById("login-btn")
         const convartedPIn = parseInt(pin);
         if ( accountNumber.length === 11){
            if(convartedPIn === 1234){
-                window.location.href = "../main.html";
+                window.location.href = "/main.html";
            }else{
             alert('Your pin is wrong!Please enter valid PIN');
            }
